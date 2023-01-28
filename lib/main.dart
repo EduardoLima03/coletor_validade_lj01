@@ -1,3 +1,4 @@
+import 'package:coleta_de_validade_lj01/api/sheets/log_sheets_api.dart';
 import 'package:coleta_de_validade_lj01/pages/form_page.dart';
 import 'package:coleta_de_validade_lj01/pages/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ void main() async {
   runApp(const SplashPage());
   WidgetsFlutterBinding.ensureInitialized();
   await UserSheetsApi.init();
+  await LogSheetsApi.init();
   runApp(const MyApp());
 }
 
